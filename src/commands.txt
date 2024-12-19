@@ -1,0 +1,11 @@
+->Descricao da solucao (1 página)
+    1-descrever a estrutura de dados usada para calcular o Ìndice de Conectividade--
+    2-como calculamos a estrutura                                                   |->podemos usar pseudocodigo ou simplesmente descrever por palavras
+    3-como é que apartir do grafo final calculamos o IC                           -- 
+
+
+
+->Complexidade (com parametros (m,n,l))
+    1-Leitura de input
+    2-
+

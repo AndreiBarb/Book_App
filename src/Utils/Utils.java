@@ -3,7 +3,14 @@ package Utils;
 import Library.Library;
 import java.io.Serializable;
 import java.util.Scanner;
+
+import Group.Group;
+
 import java.io.IOException;
+import java.util.List;
+import java.util.ArrayList;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 public class Utils implements Serializable {
     public static void clearScreen() {
@@ -171,6 +178,10 @@ public class Utils implements Serializable {
         Utils.clearScreen();
     }
 
+   
+
+
+
     public void case9(Scanner scanner, Library library) {
         //first clear the screen
         Utils.clearScreen();
@@ -178,8 +189,10 @@ public class Utils implements Serializable {
         System.out.print("Group: ");
         String group = scanner.nextLine();
 
+        Group groupObj = library.getGroup(group);
+        Utils.clearScreen();
         // make a list of all books from the group and write also the number of books in the group
-        System.out.println(group + " (" + library.getNumberOfBooksInGroup(group) + " books):");
+        System.out.println(group + "-> " + library.getNumberOfBooksInGroup(group) + " books " + String.valueOf(groupObj.calculateProgressOfGroup()) + "% :");
         System.out.println(library.getBooksFromGroup(group));
 
         new Utils().waitForKeyPress();
@@ -225,5 +238,33 @@ public class Utils implements Serializable {
         Utils.clearScreen();
     }
 
-    
+    public void case12(Scanner scanner, Library library) {
+        //first clear the screen
+        Utils.clearScreen();
+
+        System.out.print("Path: ");
+        String path = scanner.nextLine();
+
+        library.importToLibrary(path);
+
+        new Utils().waitForKeyPress();
+
+        Utils.clearScreen();
+    }
+
+    public static List<String> readFromFile(String path) {
+        List<String> data = new ArrayList<>();
+        try {
+            File file = new File(path);
+            Scanner scanner = new Scanner(file);
+            while (scanner.hasNextLine()) {
+                data.add(scanner.nextLine());
+            }
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("It was not possible to reach the file");
+            e.printStackTrace();
+        }
+        return data;
+    }
 }

@@ -16,13 +16,13 @@ public class FilesSafer {
     public void saveLibrary(Library library, String filename) {
         char check = '\u2714'; // ✔
         char cross = '\u274C'; // ❌
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename, false))) { // 'true' to append to the file if it exists
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename, false))) { // 'false' to append to the file if it exists
             for(Group group : library.getAllGroupsArray()) {
                 String nameOfGroup = group.getNameOfGroup() + " (" + group.getNumberOfBooksFromGroup() + " books):";
                 // write the name of the book in the file
                 writer.write(nameOfGroup);
                 writer.newLine();
-                for(Book book : group.getBooks().values()) {
+                for(Book book : group.getBooks()) {
                     if(book.HasBeenRead() == true) {
                         String bookString = check + " - " + book.getTitle() + " by " + book.getAuthor();
                         writer.write(bookString);    

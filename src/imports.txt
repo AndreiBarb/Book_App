@@ -1,0 +1,66 @@
+Bíblia,Gênesis,Moisés,False  
+Bíblia,Êxodo,Moisés,False  
+Bíblia,Levítico,Moisés,False  
+Bíblia,Números,Moisés,False  
+Bíblia,Deuteronômio,Moisés,False  
+Bíblia,Josué,Josué,False  
+Bíblia,Juízes,Samuel,False  
+Bíblia,Rute,Samuel,False  
+Bíblia,1 Samuel,Samuel,False  
+Bíblia,2 Samuel,Profetas,False  
+Bíblia,1 Reis,Profetas,False  
+Bíblia,2 Reis,Profetas,False  
+Bíblia,1 Crônicas,Esdras,False  
+Bíblia,2 Crônicas,Esdras,False  
+Bíblia,Esdras,Esdras,False  
+Bíblia,Neemias,Neemias,False  
+Bíblia,Ester,Mordecai,False  
+Bíblia,Jó,Desconhecido,False  
+Bíblia,Salmos,Davi,False  
+Bíblia,Provérbios,Salomão,False  
+Bíblia,Eclesiastes,Salomão,False  
+Bíblia,Cânticos dos Cânticos,Salomão,False  
+Bíblia,Isaías,Isaías,False  
+Bíblia,Jeremias,Jeremias,False  
+Bíblia,Lamentações,Jeremias,False  
+Bíblia,Ezequiel,Ezequiel,False  
+Bíblia,Daniel,Daniel,False  
+Bíblia,Oséias,Oséias,False  
+Bíblia,Joel,Joel,False  
+Bíblia,Amós,Amós,False  
+Bíblia,Obadias,Obadias,False  
+Bíblia,Jonas,Jonas,False  
+Bíblia,Miquéias,Miquéias,False  
+Bíblia,Naum,Naum,False  
+Bíblia,Habacuque,Habacuque,False  
+Bíblia,Sofonias,Sofonias,False  
+Bíblia,Ageu,Ageu,False  
+Bíblia,Zacarias,Zacarias,False  
+Bíblia,Malaquias,Malaquias,False  
+Bíblia,Mateus,Mateus,true  
+Bíblia,Marcos,João Marcos,true  
+Bíblia,Lucas,Lucas,true  
+Bíblia,João,João,true  
+Bíblia,Atos,Lucas,true  
+Bíblia,Romanos,Paulo,true  
+Bíblia,1 Coríntios,Paulo,true  
+Bíblia,2 Coríntios,Paulo,true  
+Bíblia,Gálatas,Paulo,true  
+Bíblia,Efésios,Paulo,true  
+Bíblia,Filipenses,Paulo,true  
+Bíblia,Colossenses,Paulo,true  
+Bíblia,1 Tessalonicenses,Paulo,true  
+Bíblia,2 Tessalonicenses,Paulo,true  
+Bíblia,1 Timóteo,Paulo,true  
+Bíblia,2 Timóteo,Paulo,true  
+Bíblia,Tito,Paulo,true  
+Bíblia,Filemom,Paulo,true  
+Bíblia,Hebreus,Desconhecido,true  
+Bíblia,Tiago,Tiago,true  
+Bíblia,1 Pedro,Pedro,true  
+Bíblia,2 Pedro,Pedro,true  
+Bíblia,1 João,João,true  
+Bíblia,2 João,João,true  
+Bíblia,3 João,João,true  
+Bíblia,Judas,Judas,true  
+Bíblia,Apocalipse,João,true

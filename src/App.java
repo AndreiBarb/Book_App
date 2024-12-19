@@ -16,7 +16,6 @@ public class App {
             bookMenu.showBookMenu();
             flag = bookMenu.parseMenuOption(library);
         }
-        System.out.println("Goodbye!");
         bookMenu.closeScanner();
         
         filesSafer.serializeLibrary(library, "Library.ser");

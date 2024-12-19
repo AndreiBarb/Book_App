@@ -30,7 +30,8 @@ public class BookMenu implements Serializable {
         System.out.println("9. Show group");
         System.out.println("10. Show all groups");
         System.out.println("11. Show library");
-        System.out.println("12. Exit");
+        System.out.println("12. Import to Library");
+        System.out.println("13. Exit");
     }
 
     public int parseMenuOption(Library library) {
@@ -74,12 +75,9 @@ public class BookMenu implements Serializable {
                     utils.case11(scanner, library);
                     return 0;
                 case 12:
-                    // FilesSafer filesSafer = new FilesSafer();
-                    
-                    // filesSafer.saveLibrary(library, "Library.txt");
-                    // filesSafer.serializeLibrary(library, "Library.ser");
-
-                    System.out.println("Exit");
+                    utils.case12(scanner, library);
+                    return 0;
+                case 13:
                     return 1;
                 
                 

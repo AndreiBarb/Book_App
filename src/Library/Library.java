@@ -11,7 +11,7 @@ import java.util.TreeMap;
 import java.util.Map;
 
 public class Library implements Serializable {
-        
+         
 
         private Map<String, Group> groups = new TreeMap<String, Group>();
         private Map<String, Book> books = new TreeMap<String, Book>();
@@ -26,7 +26,7 @@ public class Library implements Serializable {
                 else {
                         Group group = groups.get(name);
                         String result = "";
-                        for(Book book : group.getBooks().values()) {
+                        for(Book book : group.getBooks()) {
                                 result += book.getTitle() + "\n";
                         }
                         return result;
@@ -38,7 +38,7 @@ public class Library implements Serializable {
                 Group group = new Group(groupName);
                 groups.put(groupName, group);
                 //Add all books from the group to the list of books
-                for(Book book : group.getBooks().values()) {
+                for(Book book : group.getBooks()) {
                         books.put(book.getTitle(), book);
                 }
 
@@ -123,19 +123,26 @@ public class Library implements Serializable {
 
         //this function will return an array with all of the groups in the library
         public List<Group> getAllGroupsArray() {
-        return new ArrayList<>(groups.values());
-    }
+                return new ArrayList<>(groups.values());
+        }
 
         public int getNumberOfGroups() {
                 return groups.size();
         }
-        
-                
-        
-    
-       
 
-    
+        // This function will read from the file and import the data to the library. The only thing that this will do is add books to certain groups of the library and it will be of this type: GroupName|BookTitle|BookAuthor|HasBeenRead     
+        public void importToLibrary(String path) {
+                List<String> data = Utils.readFromFile(path);
+                for(String line : data) {
+                        String[] parts = line.split(",");
+                        if(parts[3].equals("true") || parts[3].equals("True")) {
+                                addBook(parts[0], parts[1], parts[2], true);
+                        }
+                        else {
+                        addBook(parts[0], parts[1], parts[2], false);
+                        }
+                }        
+        }
 }
 
 
